@@ -1,1 +1,21 @@
-target/
+*.class
+/target/
+/RestEasyArcheType/target/
+/RestEasyArcheType copy/target/
+/Docs/target/
+/TiDocs/target/
+/apache-tomcat-7.0.40/logs/
+/apache-tomcat-7.0.40/work/Catalina/
+/WSOnDemandPricing/target/
+/harToJsoup/target/
+/michelin-rest/target/
+/data-dtcpnziprest/target/
+/scheduleDTC/target/
+/tirebuyer-parent/tbc-part-scraper/target/
+/tirebuyer-parent/tbc-price-scraper/target/
+/tirebuyer-parent/tbc-utils/target/
+/tirebuyer-parent/tirebuyer-utils/target/
+/tirebuyer-parent/tirebuyer-part-scraper/target/
+/testTCI/target/
+/ws-tester/target/
+/CurlClient/target/

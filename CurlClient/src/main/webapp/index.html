@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin:0px;
+                padding:0px;
+                background-color: rgb(100.0%, 100.0%, 100.0%);
+            }
+
+            .top{
+                margin:0px;
+                padding-top:3px;
+                padding-bottom:5px;
+                width:100%;
+                letter-spacing:5px;
+                background-color:rgb(205, 205, 205);
+                color:white;
+                text-align:center;
+            }
+
+            .bottom{
+                margin:0px;
+                padding-top:3px;
+                padding-bottom:5px;
+                width:100%;
+                letter-spacing:5px;
+                background-color:rgb(205, 205, 205);
+                color:white;
+                text-align:center;
+            }
+
+            .leftright{
+                height:50px;
+                margin:0px;
+                padding-right:15px;
+                padding-left:15px;
+                padding-top:24px;
+                text-align:center;
+                color:black;
+                letter-spacing:2px;
+
+            }
+
+            #parentDiv{
+                position:static;
+                margin:0px;
+                padding:0px;
+            }
+
+            /* This is your div's css. */
+            #innerDiv{
+                /***  CSS Borders  ***/
+                border:3px solid rgb(24, 24, 24);
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <h2>Tire Intelligence Web Curl Client Test Page</h2>
+        </div>
+        <form action="rest/CurlClient.json/runCurlScript" method="post">
+            <div id="parentDiv">
+                <div>
+                    <h3>Curl Command:</h3>
+                    <p>
+                        <textarea rows="15" cols="120" name="commandToRun">curl 'http://1010tires.com/' -H 'DNT: 1' -H 'Accept-Encoding: gzip,deflate,sdch' -H 'Host: 1010tires.com' -H 'Accept-Language: en-US,en;q=0.8' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Connection: keep-alive' --compressed</textarea>
+                    </p>
+                </div>
+                <div class="leftright" style="float:left;">
+                    <h4>Base 64 Encode response body?</h4>
+                </div>
+                <div class="leftright" style="float:left;">
+                    <input type="radio" id="default_true" name="base64EncodeResponseBody" value="true">true
+                    <input type="radio" name="base64EncodeResponseBody" value="false" checked="checked">false
+                </div>
+            </div>
+            <div class="bottom" style="clear:both;">
+                <input type="submit" value="Run Curl Command" />
+            </div>
+        </form>
+    </body>
+</html>
